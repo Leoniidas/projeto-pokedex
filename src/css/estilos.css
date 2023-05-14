@@ -1,0 +1,187 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: #5e5b5bad;
+    color: #333333;
+}
+
+body.modo-escuro {
+    background-color: #212121;
+    color: #f5f5f5;
+}
+
+header {
+    display: flex;
+    /*Flex: regra de pai-filho*/
+    /*Fez com que icones diferentes fiquem espaçados*/
+    justify-content: space-between;
+    padding: 25px;
+}
+
+/*Estiliza apenas o que está dentro da header dando espaço*/
+header .logo,
+header .imagem-botao{
+    width: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+/*header .pokemon-logo{
+    width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}*/
+
+header #botao-alterar-tema {
+    /*Estilizar ID*/
+    background: none;
+    border: none;
+}
+
+header .logo:hover,
+header .imagem-botao:hover,
+main .cartao-pokemon:hover {
+    /*Escalar*/
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+main {
+    padding: 25px;
+}
+
+main .listagem-pokemon {
+    display: flex;
+    flex-wrap: wrap;
+    /*Se faltar espaço ele quebra em mais linhas*/
+    gap: 30px;
+    /*Faz eles terem um espaçamento entre cartões*/
+    justify-content: center;
+}
+    /*Formato do cartão - testar novos modelos*/
+main .cartao-pokemon {
+    background-color: #d8e3ec;
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 15px;
+    transition: 0.2s ease-in-out;
+    /*Flutuação*/
+}
+
+main .cartao-pokemon:hover {
+    background-color: #96d9e6;
+}
+
+.modo-escuro .cartao-pokemon {
+    background-color: #a8a8a8;
+}
+
+main .cartao-pokemon .informacoes {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #333333;
+    border-radius: 10px;
+}
+
+main .cartao-pokemon .informacoes span {
+    padding: 5px;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+main .cartao-pokemon .gif {
+    width: 80px;
+    height: 73px;
+}
+
+main .cartao-pokemon .tipos {
+    display: flex;
+    gap: 15px;
+}
+
+main .cartao-pokemon .tipo {
+    padding: 8px;
+    border-radius: 10px;
+}
+
+/*Tipos pokemons*/
+.grama {
+    background-color: #7ac74c;
+}
+
+.veneno {
+    background-color: #b43fb2fb;
+}
+
+.fogo {
+    background-color: #ee8130;
+}
+
+.agua {
+    background-color: #6390f0;
+}
+
+.inseto {
+    background-color: #a6b91a;
+}
+
+.voador {
+    background-image: linear-gradient(#3dc7ef 50%, #bdb9b8 50%);
+}
+
+.normal {
+    background-color: #c2bdbd;
+}
+
+.eletrico {
+    background-color: #eed535;
+}
+
+.terrestre {
+    background-image: linear-gradient(#f7de3f 50%, #ab9842 50%);
+}
+
+.lutador {
+    background-color: #812929;
+}
+
+.fantasma{
+    background-color: #7b62a3;
+}
+
+.psiquico {
+    background-color: #ce41ce;
+}
+
+.rocha {
+    background-color: #585303;
+}
+
+.metal {
+    background-color: #6c6c6d;
+}
+
+.gelo {
+    background-color: #9db6eb;
+}
+
+.dragao {
+    background-image: linear-gradient(#53a4cf 50%, #f16e57 50%); 
+}
+
+.fada{
+    background-color: #fdb9e9;
+}
+
+main .descricao {
+    max-height: 80px;
+    /*Esconde o texto dentro da carta pra fazer uma barra de rolagem depois*/
+    overflow-y: scroll;
+    font-size: 14px;
+    padding-right: 10px;
+}
